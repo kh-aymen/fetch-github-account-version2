@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <title>Fetch User Data From github</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            padding-top: 5rem;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 3rem;
+            width: 100%;
+            height: auto;
+        }
+
+        .container>.header {
+            width: 100%;
+        }
+
+        .container>.header>h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .container>.content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 3rem;
+            width: 100%;
+            height: auto;
+        }
+
+        .container>.content>.content-form {
+            width: 70%;
+            display: flex;
+        }
+
+        .container>.content>.content-form>form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .container>.content>.content-form>form>input {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            background-color: #f0f0f0;
+            font-size: 18px;
+        }
+
+        .container>.content>.content-form>form>input:focus {
+            box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.39);
+            -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.39);
+            -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.39);
+        }
+
+        .container>.content>.content-form>form>.content-form-button>button,
+        .btn {
+            width: 100%;
+            padding: 0.7rem;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 18px;
+            background-color: rgb(65, 65, 248);
+            transition: all ease-in-out 100ms;
+        }
+
+        .btn{
+            margin-top: 1rem;
+        }
+
+        .container>.content>.content-form>form>.content-form-button>button:hover,
+        .btn:hover {
+            background-color: rgb(48, 48, 179);
+        }
+
+        .container>.content>.content-data {
+            width: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container>.content>.content-data>div {
+            flex: 1;
+        }
+
+        .container>.content>.content-data>.content-data-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>GitHub Search User Data App</h1>
+        </div>
+
+        <div class="content">
+            <div class="content-form">
+                <form id="form" autocomplete="on">
+                    <input type="text" class="content-form-input" placeholder="Enter GitHub user name pls" id="userName"
+                        required>
+                    <div class="content-form-button">
+                        <button>Search User</button>
+                    </div>
+                </form>
+            </div>
+            <div class="content-data" id="result">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js" defer></script>
+</body>
+
+</html>
